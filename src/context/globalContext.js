@@ -16,6 +16,7 @@ const GlobalContextProvider = (props) => {
     setCurrentTheme(themeType);
   };
 
+  // save theme to local storage
   return (
     <GlobalContext.Provider
       value={{
