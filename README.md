@@ -1,8 +1,8 @@
-In this article, we'll be creating a theme switcher using styled-components, context API, and of course, react.
+We'll be creating a theme switcher using styled-components, context API, and of course, react.
 
 Live Example: [https://codesandbox.io/s/react-theme-swticher-hbgjc](https://codesandbox.io/s/react-theme-swticher-hbgjc)
 
-Github Repository: [https://github.com/holdmypotion/React-Theme-Swticher](https://github.com/holdmypotion/React-Theme-Swticher)
+Github Repository:
 
 # Setup
 
@@ -94,7 +94,7 @@ import GlobalContextProvider from "./context/globalContext";
 
 ReactDOM.render(
   <React.StrictMode>
-		{/* Wrap the App component with the GlobalContextProvider
+    {/* Wrap the App component with the GlobalContextProvider
 				created in the previous code snippet */}
     <GlobalContextProvider>
       <App />
@@ -158,10 +158,10 @@ const Layout = ({ children }) => {
     button: "#374151",
   };
 
-	// 3.
+  // 3.
   const currentTheme = useContext(GlobalContext);
 
-	// 4.
+  // 4.
   let theme;
   switch (currentTheme.theme) {
     case "dark":
@@ -348,7 +348,7 @@ import {
   Content,
 } from "../styles/homeStyles";
 const Home = () => {
-	
+
 	// 1.
   const { theme, themeSwitchHandler } = useContext(GlobalContext);
 
@@ -409,7 +409,7 @@ Let's break it down:
 
 1. We are fetching our context from the globalContext using the useContext() hook.
 2. The "onChange" prop of the switch button toggles the theme between dark and light.
-(A better way would be to create a separate button to call for different themes as we already have a switch-case statement to select the theme in the Layout.js file.)
+   (A better way would be to create a separate button to call for different themes as we already have a switch-case statement to select the theme in the Layout.js file.)
 
 Finally, import this component into the App.js file
 
@@ -436,3 +436,5 @@ This is super fun, so surely give it a try.
 # Thank you so much for reading.
 
 I would love to hear your views. Be sure to comment below!
+#   D a r k M o d e T h e m e S w i t c h  
+ 
